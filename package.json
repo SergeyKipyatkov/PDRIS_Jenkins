@@ -1,0 +1,22 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha ./test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "allure-commandline": "^2.20.1",
+    "chai": "^4.3.7",
+    "express": "^4.16.3",
+    "mocha": "^10.1.0",
+    "request": "^2.85.0"
+  },
+  "devDependencies": {
+    "@wdio/allure-reporter": "^7.26.0",
+    "jasmine-node": "^1.14.5"
+  }
+}

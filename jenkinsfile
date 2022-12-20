@@ -1,0 +1,34 @@
+pipeline {
+    agent any
+
+    tools {
+        nodejs "node"
+    }
+
+    stages{
+        stage('Cloning'){
+            steps {
+                git url: "https://github.com/SergeyKipyatkov/PDRIS_Jenkins.git",
+                    branch: "main"
+            }
+        }
+
+        stage("Install dependencies"){
+            steps {
+                sh 'npm install'
+            }
+        }
+
+        stage("Test"){
+            steps {
+                sh 'npm test'
+            }
+        }
+
+        stage("Build and run container"){
+            steps {
+                sh 'sh deploy.sh'
+            }
+        }
+    }
+}
